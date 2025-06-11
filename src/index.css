@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  background: #161513;
+  color: white;
+  font-family: outfit;
+}
+
+
+
+/* Headings color - white */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+/* Paragraphs color - grey */
+p {
+  color: #bbbbbb; /* light grey, you can adjust as you like */
+}
+/* Example: global hover effect for all links */
+a:hover {
+  color: #00ffff; /* cyan/tech-blue hover color */
+  transition: color 0.3s ease;
+}
+
+/* For all buttons */
+button:hover {
+  background-color: #00ffff;
+  color: #000; /* contrast text on hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* For paragraphs or any text with hover */
+p:hover {
+  color: #00ffff;
+  transition: color 0.3s ease;
+}
