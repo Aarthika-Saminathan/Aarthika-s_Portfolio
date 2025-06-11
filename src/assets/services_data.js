@@ -5,7 +5,7 @@ import algoCert from '../assets/certificates/Front-End-Development-Meta.png';
 import dbCert from '../assets/certificates/great learning -react.jpg';
 
 import gitCert from '../assets/certificates/Javascript course completion-Great Learning.jpeg';
-import internCert from '../assets/certificates/Zeckho IT Services(internship).png';
+import internCert from '../assets/certificates/Zeckho IT Services.png';
 import pythonCert from '../assets/certificates/Python_IIT.png';
 import powerbicert from '../assets/certificates/power_bi_cer.jpeg';
 
