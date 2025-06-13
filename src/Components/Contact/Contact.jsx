@@ -1,9 +1,11 @@
 import React from 'react';
 import './Contact.css';
-import theme_pattern from '../../assets/theme_pattern.svg';
+import { FaLinkedin } from "react-icons/fa";
+
 import mail_icon from '../../assets/mail_icon.svg';
 import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
+import linkedin_icon from '../../assets/linkedin_icon.webp';
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -27,7 +29,7 @@ const Contact = () => {
 
     if (res.success) {
       alert(res.message);
-      form.reset(); // ✅ Clear form only after success
+      form.reset();
     } else {
       alert("Submission failed. Please try again.");
     }
@@ -37,7 +39,6 @@ const Contact = () => {
     <div id='contact' className="contact">
       <div className="contact-title">
         <h1>Get in touch</h1>
-        {/* <img src={theme_pattern} alt="Theme Pattern" /> */}
       </div>
 
       <div className="contact-section">
@@ -49,13 +50,36 @@ const Contact = () => {
           <div className="contact-details">
             <div className="contact-detail">
               <img src={mail_icon} alt="Email" />
-              <p>aarthikasaminathan7896@gmail.com</p>
+              <p>
+                <a href="mailto:aarthikasaminathan7896@gmail.com">
+                  aarthikasaminathan7896@gmail.com
+                </a>
+              </p>
             </div>
 
-            <div className="contact-detail">
+          
+
+
+<div className="contact-detail">
+  <FaLinkedin className="linkedin-icon" />
+  <p>
+    <a 
+      href="https://www.linkedin.com/in/aarthika-s-8209092a7/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      linkedin.com/in/aarthika-s
+    </a>
+  </p>
+</div>
+
+
+            {/* <div className="contact-detail">
               <img src={call_icon} alt="Phone" />
-              <p>8124537896</p>
-            </div>
+              <p>
+                <a href="tel:8124537896">8124537896</a>
+              </p>
+            </div> */}
 
             <div className="contact-detail">
               <img src={location_icon} alt="Location" />

@@ -17,6 +17,7 @@
   animation: floatUp infinite ease-in-out;
 }
 
+/* Float animation */
 @keyframes floatUp {
   0% {
     transform: translateY(0);
@@ -29,5 +30,44 @@
   100% {
     transform: translateY(0);
     opacity: 0.5;
+  }
+}
+
+/* ===========================
+   Responsive Media Queries
+   =========================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .background-container {
+    background: linear-gradient(135deg, #1a2b3c, #1e3e4f, #27475a);
+  }
+
+  .ball {
+    width: 6px;
+    height: 6px;
+    animation-duration: 3s;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .background-container {
+    background: linear-gradient(135deg, #111d2f, #1a2d3b, #223a49);
+  }
+
+  .ball {
+    width: 5px;
+    height: 5px;
+    animation-duration: 2.5s;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1400px) {
+  .ball {
+    width: 10px;
+    height: 10px;
+    animation-duration: 5s;
   }
 }

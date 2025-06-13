@@ -26,27 +26,31 @@ const Navbar = () => {
       <ul ref={menuRef} className="nav-menu">
         <img src={menu_close} onClick={closeMenu} alt="Close Menu" className="nav-mob-close" />
         
-        {['home', 'about', 'certifications','experience', 'projects', 'contact'].map((item) => (
+        {[/* 'home', */ 'about','skills', 'certifications',  'experience', 'projects', 'contact'].map((item) => (
           <li key={item}>
-            <AnchorLink className="anchor-link" offset={50} href={`#${item}`} onClick={() => setMenu(item)}>
+            <AnchorLink
+              className="anchor-link"
+              offset={50}
+              href={`#${item}`}
+              onClick={() => setMenu(item)}
+            >
               <p>{item.charAt(0).toUpperCase() + item.slice(1)}</p>
             </AnchorLink>
-            {menu === item && <img src={underline} alt="Underline" />}
+{/*             {menu === item && <img src={underline} alt="Underline" />} */}
           </li>
         ))}
       </ul>
 
       <div className="nav-connect">
-  <a 
-    className="anchor-link" 
-    href="https://github.com/Aarthika-Saminathan?tab=repositories" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    Github
-  </a>
-</div>
-
+        <a 
+          className="anchor-link" 
+          href="https://github.com/Aarthika-Saminathan?tab=repositories" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
+      </div>
     </nav>
   );
 };

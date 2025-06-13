@@ -1,96 +1,145 @@
-.mywork{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+.mywork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
 }
 
-.mywork-title{
-    position: relative;
-
+.mywork-title {
+  position: relative;
 }
 
-.mywork-title h1{
-    padding: 0px 30px;
-    font-size: 60px;
-    font-weight: 600;
+.mywork-title h1 {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
 }
 
-.mywork-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+.mywork-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  
 }
 
-.mywork-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-
+.project-card {
+  background-color: rgba(0, 47, 75, 0.7);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.4s ease, border-color 0.4s ease, background-image 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.mywork-container img{
-    box-sizing: border-box;
-    width: 419px;
-    height: 280px;
-    transition: 0.3s;
-    cursor: pointer;
+.project-image {
+  width: 100%;
+  height: 180px;        /* Fixed height */
+  max-height: 180px;    /* Ensure max height */
+  object-fit: cover;    /* Cover the container (crop if necessary) */
+  border-radius: 12px;
+  flex-shrink: 0;       /* Prevent shrinking */
+  transition: transform 0.3s;
+  background-color: #111;
 }
 
 
-.mywork-container img:hover {
-  transform: scale(1.10);
-  border-color: #00ffff; /* bright cyan for tech-blue vibe */
-  box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7); /* glowing shadow */
+.project-card:hover {
+  transform: scale(1.02); /* smaller zoom */
+  border-color: rgba(0, 255, 255, 0.4); /* softer cyan */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3); /* gentler glow */
+  background-image: linear-gradient(135deg, #112f3a, #1c3d4d, #264b5f); /* lighter gradient */
 }
 
-.mywork-showmore{
-    display: flex;
-    gap: 15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
-    cursor: pointer;
+
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  
+  margin-top: 15px;
 }
 
-.mywork-showmore:hover{
+
+.project-description {
+  color: #ccc;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-tag {
+  background-color: #0f0f0f;
+  color: #00ffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Show More */
+.mywork-showmore {
+ display: flex;
+  gap: 15px;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 12px 40px;        /* Reduced from 30px 60px for better button shape */
+  font-size: 20px;           /* Slightly smaller but still prominent */
+  font-weight: 600;          /* Slightly bolder for emphasis */
+  margin-bottom: 80px;
+  transition: gap 0.3s ease, padding 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* optional: keep transparent or add subtle bg */
+  color: white;
+}
+
+.mywork-showmore:hover {
+gap: 25px;                 /* Slightly bigger gap for hover */
+  padding: 14px 50px;        /* A bit more padding on hover for nice expansion */
+  transition: gap 0.3s ease, padding 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1); /* subtle highlight */
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .mywork {
+    gap: 50px;
+    margin: 50px 70px;
+    align-items: start;
+  }
+
+  .mywork-title h1 {
+    padding: 0;
+    font-size: 50px;
+  }
+
+  .mywork-container {
+    grid-template-columns: 1fr;
     gap: 30px;
-    transition: 0.6s;
-}
-@media(max-width: 768px){
-    .mywork{
-        gap: 50px;
-        margin: 50px 70px;
-        align-items: start;
-    }
-    .mywork-title h1{
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
-    }
-    .mywork-title img{
-        width: 130px;
-        margin-right: -20px;
-    }
-    .mywork-container{
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-    .mywork-container img{
-        width: 100%;
-        height: 100%;
-    }
-    .mywork-showmore{
-        padding: 20px 40px;
-        font-size: 18px;
-        margin: 50px auto;
-        cursor: pointer;
-    }
+  }
+
+  .project-image {
+    height: auto;
+  }
+
+  .mywork-showmore {
+    padding: 20px 40px;
+    font-size: 18px;
+    margin: 50px auto;
+  }
 }

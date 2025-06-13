@@ -35,7 +35,8 @@ button:hover {
 }
 
 /* For paragraphs or any text with hover */
-p:hover {
+/* p:hover {
   color: #00ffff;
   transition: color 0.3s ease;
 }
+ */

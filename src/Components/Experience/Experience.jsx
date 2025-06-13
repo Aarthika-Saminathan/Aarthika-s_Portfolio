@@ -1,57 +1,69 @@
-import React, { useState } from 'react';
-import './Experience.css';
-import theme_pattern from '../../assets/theme_pattern.svg';
-import experience_data from '../../assets/experience_data';
+import React from "react";
+import "./Experience.css";
+import web from "../../assets/web.jpg";
+import digital_marketting from "../../assets/digital_marketting.jpg";
 
 const Experience = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const toggleExpand = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
-
   return (
-    <div id="experience" className="experience">
-      <div className="experience-title">
-        <h1> Experience</h1>
-       {/*  <img src={theme_pattern} alt="Pattern" /> */}
-      </div>
+    <section id="experience" className="experience-section">
+      <h2 className="experience-heading">Experience</h2>
+      {/* Uncomment below if you want a subheading */}
+      {/* <p className="experience-subheading">
+        My work experience as a software engineer and digital marketing intern across multiple organizations.
+      </p> */}
 
-      <div className="experience-container">
-        {experience_data.map((exp, index) => {
-          const isExpanded = expandedIndex === index;
+      <div className="timeline-container">
+        <div className="timeline-line"></div>
 
-          return (
-            <div className="experience-card" key={index}>
-              <h3
-                className="gradient-text role-link"
-                onClick={() => window.open(exp.certificate_link, '_blank')}
-              >
-                {exp.role}
-              </h3>
-              <p><strong>{exp.company}</strong></p>
-              <p>{exp.duration}</p>
-
-              <p className={`description ${isExpanded ? 'expanded' : 'collapsed'}`}>
-                {exp.description}
-              </p>
-
-              {exp.description.length > 0 && (
-                <button
-                  className="read-more-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleExpand(index);
-                  }}
-                >
-                  {isExpanded ? 'Read Less' : 'Read More'}
-                </button>
-              )}
+        {/* Web Developer Experience */}
+        <div className="timeline-entry right">
+          <div className="timeline-card">
+            <div className="experience-header">
+              {/* <FaGraduationCap className="experience-icon" /> */}
+              <div>
+                <h3 className="role">Web Developer Intern</h3>
+                <p className="company">Zeckho IT Services</p>
+                <p className="duration">April 2024 – April 2025</p>
+              </div>
             </div>
-          );
-        })}
+            <p className="description">
+              Developed dynamic and responsive web pages using React.js, HTML, CSS, and JavaScript.
+              Integrated APIs and managed state using React hooks. Built UIs for projects like Dez Art and Zaaz Events.
+            </p>
+          </div>
+          <div className="timeline-icon-wrapper">
+            <div className="timeline-circle">
+              <img src={web} alt="Web Development" />
+            </div>
+            <p className="date-on-right">April 2024 – April 2025</p>
+          </div>
+        </div>
+
+        {/* Digital Marketing Experience */}
+        <div className="timeline-entry left">
+          <div className="timeline-card">
+            <div className="experience-header">
+              {/* <FaGraduationCap className="experience-icon" /> */}
+              <div>
+                <h3 className="role">Digital Marketing Intern</h3>
+                <p className="company">Zeckho IT Services</p>
+                <p className="duration">October 2023 – December 2023</p>
+              </div>
+            </div>
+            <p className="description">
+              Handled social media marketing, SEO, and ad campaigns for small businesses.
+              Created content, tracked metrics, and improved brand visibility.
+            </p>
+          </div>
+          <div className="timeline-icon-wrapper">
+            <div className="timeline-circle">
+              <img src={digital_marketting} alt="Digital Marketing" />
+            </div>
+            <p className="date-on-left">April 2024-April 2025</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
