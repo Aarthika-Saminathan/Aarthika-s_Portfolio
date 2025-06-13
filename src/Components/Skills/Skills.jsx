@@ -3,29 +3,16 @@ import "./Skills.css";
 
 const customIcons = {
   django: "https://cdn.worldvectorlogo.com/logos/django.svg",
-  powerbi:
-    "https://upload.wikimedia.org/wikipedia/commons/c/cf/Microsoft_Power_BI_Logo.svg",
-  dax:
-    "https://upload.wikimedia.org/wikipedia/commons/c/cf/Microsoft_Power_BI_Logo.svg", // same as Power BI
-  etl:
-    "https://cdn-icons-png.flaticon.com/512/3046/3046120.png", // generic ETL icon
-  datavisualization:
-    "https://cdn-icons-png.flaticon.com/512/1161/1161453.png", // generic chart icon
-  netlify:
-    "https://upload.wikimedia.org/wikipedia/commons/e/e6/Netlify_logo.svg",
-  postman:
-    "https://cdn.worldvectorlogo.com/logos/postman.svg",
-  canva:
-    "https://upload.wikimedia.org/wikipedia/commons/3/3e/Canva_Logo.svg",
-  drawio:
-    "https://cdn.worldvectorlogo.com/logos/draw-io.svg",
-  slack:
-    "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png",
-  microsoft365:
-    "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Office_Logo_%282019%E2%80%93present%29.svg",
-  vim:
-    "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
-  django: "https://cdn.worldvectorlogo.com/logos/django.svg",
+  powerbi: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Microsoft_Power_BI_Logo.svg",
+  dax: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Microsoft_Power_BI_Logo.svg",
+  etl: "https://cdn-icons-png.flaticon.com/512/3046/3046120.png",
+  datavisualization: "https://cdn-icons-png.flaticon.com/512/1161/1161453.png",
+  netlify: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Netlify_logo.svg",
+  postman: "https://cdn.worldvectorlogo.com/logos/postman.svg",
+  canva: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Canva_Logo.svg",
+  drawio: "https://cdn.worldvectorlogo.com/logos/draw-io.svg",
+  slack: "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png",
+  microsoft365: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_Office_Logo_%282019%E2%80%93present%29.svg",
 };
 
 const skills = {
@@ -55,7 +42,6 @@ const skills = {
     { name: "VS Code", icon: "vscode" },
     { name: "Postman", icon: "postman" },
     { name: "Canva", icon: "canva" },
-  
   ],
 };
 
@@ -71,8 +57,6 @@ const getIconUrl = (iconName) => {
 const Skills = () => {
   return (
     <div id="skills" className="skills-section">
-  
-    <div className="skills-section">
       <h1 className="skills-heading">Skills</h1>
 
       <div className="skills-container">
@@ -98,8 +82,6 @@ const Skills = () => {
         ))}
       </div>
     </div>
-</div>
-
   );
 };
 

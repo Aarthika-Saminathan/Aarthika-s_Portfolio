@@ -47,7 +47,7 @@ const Experience = () => {
               <div>
                 <h3 className="role">Digital Marketing Intern</h3>
                 <p className="company">Zeckho IT Services</p>
-                <p className="duration">October 2023 – December 2023</p>
+                <p className="duration">April 2024-April 2025</p>
               </div>
             </div>
             <p className="description">
